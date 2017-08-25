@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="bindEvent.js"></script>
+</head>
+<body>
+	<div id="div1">
+		<a href="http://www.baidu.com">百度</a>
+		<a href="http://www.sina.com">新浪</a>
+		<p id="p1">激活</p>
+		<p id="p2">取消</p>
+	</div>
+	<div id="div2">
+		<p id="p3">取消</p>
+		<p id="p4">取消</p>
+		<p id="p5">取消</p>
+	</div>
+
+	<script type="text/javascript">
+		var oDiv1 = document.getElementById('div1');
+		bindEvent(oDiv1, 'click', 'a', function(ev) {
+			if (ev.preventDefault) {
+				ev.preventDefault();	
+			} else {
+				ev.returnValue = false;
+			}
+			alert(this.innerHTML);
+		});
+		bindEvent(oDiv1, 'click', 'p', function(ev) {
+			alert(this.innerHTML);
+		})
+
+		var oDiv2 = document.getElementById('div2');
+		bindEvent(oDiv2, 'click', function() {
+			alert(111);
+		});
+	</script>
+</body>
+</html>
