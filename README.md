@@ -33,9 +33,9 @@ function bindEvent(elem, type, selector, fn) {
       var target;
       if (selector) {
         target = ev.srcElement;
-          if (target.tagName.toLowerCase() === selector) {
-            fn.call(target, ev);
-          }
+        if (target.tagName.toLowerCase() === selector) {
+          fn.call(target, ev);
+        }
       } else {
         fn(ev);
       }
