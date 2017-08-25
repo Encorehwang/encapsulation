@@ -58,3 +58,9 @@ function bindEvent(elem, type, selector, fn) {
 3. 如果绑定了3个处理函数a、b、c, 则执行顺序依次为c,b,a
 
 在使用该方法的浏览器(IE6-8)下, 针对事件对象如果要取消冒泡和阻止默认事件分别使用: ev.cancelBubble=true和ev.returnValue=false;
+
+
+
+
+
+ttt
