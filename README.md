@@ -61,3 +61,4 @@ function bindEvent(elem, type, selector, fn) {
 
 
 嘻嘻嘻
+哈哈哈韩红会画画
