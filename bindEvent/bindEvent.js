@@ -6,7 +6,7 @@ function bindEvent(elem, type, selector, fn) {
 	}
 
 	if (elem.addEventListener) {
-		elem.addEventListener(type, function(ev) {
+		elem.addEventListener(type, function (ev) {
 			// 除IE6-8之外的标准浏览器
 			var target;
 			if (selector) {
@@ -20,7 +20,7 @@ function bindEvent(elem, type, selector, fn) {
 		});
 	} else {
 		// 兼容IE6-IE9
-		elem.attachEvent('on' + type, function(ev) {
+		elem.attachEvent('on' + type, function (ev) {
 			var target;
 			if (selector) {
 				// 说明是要使用事件代理, 也就是要指明哪一个子元素发生事件的
